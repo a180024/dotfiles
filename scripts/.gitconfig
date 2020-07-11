@@ -1,0 +1,13 @@
+[alias]
+	graph = log --all --graph --decorate --oneline
+
+[core]
+	excludesfile = /Users/davin/.gitignore_global
+[user]
+	email = a180024@e.ntu.edu.sg
+	name = a180024
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
