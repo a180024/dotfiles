@@ -1,11 +1,14 @@
 #!/bin/bash
 
-git add .
+gitacp()  {
 
-echo 'Enter the commit message:'
-read -r commitMessage
+    git add .
+    echo 'Enter the commit message:'
+    read -r commitMessage
+    git commit -m "$commitMessage"
+    git push origin master
 
-git commit -m "$commitMessage"
+}
 
-git push origin master
+
 

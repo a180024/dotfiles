@@ -1,18 +1,14 @@
-" Comments in Vimscript start with a `"`.
-
-" If you open this file in Vim, it'll be syntax highlighted for you.
-
-" Vim is based on Vi. Setting `nocompatible` switches from the default
-" Vi-compatibility mode and enables useful Vim functionality. This
-" configuration option turns out not to be necessary for the file named
-" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
-" is present. But we're including it here just in case this config file is
-" loaded some other way (e.g. saved as `foo`, and then Vim started with
-" `vim -u foo`).
-set nocompatible
+" set nocompatible
 filetype plugin indent on
+
+"color scheme
+colorscheme onedark
+highlight Normal ctermbg=None
+highlight Linenr ctermfg=DarkGrey
+
 " Turn on syntax highlighting.
 syntax on
+
 " Disable the default Vim startup message.
 set shortmess+=I
 
@@ -25,33 +21,23 @@ augroup myvimrchooks
 	autocmd bufwritepost .vimrc source ~/.vimrc
 augroup END
 
-" This enables relative line numbering mode. With both number and
-" relativenumber enabled, the current line shows the true line number, while
-" all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
+" python
+let python_highlight_all = 1
+
+" line number
 set relativenumber
 
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
-" The backspace key has slightly unintuitive behavior by default. For example,
-" by default, you can't backspace before the insertion point set with 'i'.
-" This configuration makes backspace behave more reasonably, in that you can
 " backspace over anything.
 set backspace=indent,eol,start
 
-" By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
-" shown in any window) that has unsaved changes. This is to prevent you from 
-" forgetting about unsaved changes and then quitting e.g. via `:qa!`. We find
-" hidden buffers helpful enough to disable this protection. See `:help hidden`
-" for more information on this.
+" hide a buffer
 set hidden
 
-" This setting makes search case-insensitive when all characters in the string
-" being searched are lowercase. However, the search becomes case-sensitive if
-" it contains any capital letters. This makes searching more convenient.
+" search case insensitive when sentence has no caps; sensitive when sentence
+" has caps
 set ignorecase
 set smartcase
 
@@ -68,30 +54,109 @@ set noerrorbells visualbell t_vb=
 " sometimes be convenient.
 set mouse+=a
 
-" Try to prevent bad habits like using the arrow keys for movement. This is
-" not the only possible bad habit. For example, holding down the h/j/k/l keys
-" for movement, rather than using more efficient movement commands, is also a
-" bad habit. The former is enforceable through a .vimrc, while we don't know
-" how to prevent the latter.
-" Do this in normal mode...
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-" ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+" restore place in file from previous session
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" sane text files
+set fileformat=unix
+set encoding=utf-8
+set fileencoding=utf-8
+
+" sane editing
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set colorcolumn=80
+set expandtab
+set viminfo='25,\"50,n~/.viminfo
+
+" open terminal
+nmap <Leader>t :term<CR>
+
+" indent/unindent with tab/shift-tab
+nmap <Tab> >>
+imap <S-Tab> <Esc><<i
+nmap <S-tab> <<
+
+" Avoid using arrow keys
+" nnoremap <Left>  :echoe "Use h"<CR>
+" nnoremap <Right> :echoe "Use l"<CR>
+" nnoremap <Up>    :echoe "Use k"<CR>
+" nnoremap <Down>  :echoe "Use j"<CR>
+"" ...and in insert mode
+" inoremap <Left>  <ESC>:echoe "Use h"<CR>
+" inoremap <Right> <ESC>:echoe "Use l"<CR>
+" inoremap <Up>    <ESC>:echoe "Use k"<CR>
+" inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+" vim tabs
+map <C-t><Up> :tabr<CR>
+map <C-t><Down> :tabl<CR>
+map <C-t><Left> :tabp<CR>
+map <C-t><right> :tabn<CR>
+
+" move through buffers
+nmap <leader>[ :bp!<CR>
+nmap <leader>] :bn!<CR>
+nmap <leader>x :bd<CR>
 
 " Insert a line above with going into insert mode
 nnoremap <leader>O O<ESC>
 
 " vim plug
+
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'majutsushi/tagbar'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
+Plug 'lepture/vim-jinja'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'scrooloose/syntastic'
+Plug 'romkatv/powerlevel10k'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+
+" powerline fonts
+let g:airline_powerline_fonts = 1
+
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver', 
+  \ 'coc-eslint',
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ 'coc-python',
+  \ ]
+
+" nerd tree tabs
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup=1
+
+" tagbar
+nmap <Leader>b :TagbarToggle<CR> 
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+map <leader>s :SyntasticCheck<CR>
+map <leader>d :SyntasticReset<CR>
