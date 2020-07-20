@@ -90,10 +90,10 @@ nmap <S-tab> <<
 " inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " vim tabs
-map <C-t><Up> :tabr<CR>
-map <C-t><Down> :tabl<CR>
-map <C-t><Left> :tabp<CR>
-map <C-t><right> :tabn<CR>
+map <C-y><Up> :tabr<CR>
+map <C-y><Down> :tabl<CR>
+map <C-y><Left> :tabp<CR>
+map <C-y><right> :tabn<CR>
 
 " move through buffers
 nmap <leader>[ :bp!<CR>
@@ -114,7 +114,6 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'lepture/vim-jinja'
 Plug 'pangloss/vim-javascript'
@@ -130,17 +129,6 @@ set rtp+=/usr/local/opt/fzf
 
 " powerline fonts
 let g:airline_powerline_fonts = 1
-
-" coc config
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver', 
-  \ 'coc-eslint',
-  \ 'coc-prettier', 
-  \ 'coc-json', 
-  \ 'coc-python',
-  \ ]
 
 " nerd tree tabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
