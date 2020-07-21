@@ -21,6 +21,8 @@ augroup myvimrchooks
 	autocmd bufwritepost .vimrc source ~/.vimrc
 augroup END
 
+autocmd BufWritePost .vimrc,_vimrc source $MYVIMRC
+
 " python
 let python_highlight_all = 1
 
