@@ -38,8 +38,7 @@ set backspace=indent,eol,start
 " hide a buffer
 set hidden
 
-" search case insensitive when sentence has no caps; sensitive when sentence
-" has caps
+" search case sensitive/insensitive when sentence has caps/nocaps
 set ignorecase
 set smartcase
 
@@ -58,6 +57,9 @@ set mouse+=a
 
 " restore place in file from previous session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" auto-save buffer
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 " sane text files
 set fileformat=unix
@@ -105,6 +107,10 @@ nmap <leader>x :bd<CR>
 " Insert a line above with going into insert mode
 nnoremap <leader>O O<ESC>
 
+" terminal
+set splitbelow
+set termwinsize="10x0"
+
 " vim plug
 
 call plug#begin()
@@ -132,9 +138,12 @@ set rtp+=/usr/local/opt/fzf
 " powerline fonts
 let g:airline_powerline_fonts = 1
 
-" nerd tree tabs
+" nerdtree tabs
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
+
+" nerd commenter
+let g:NERDTrimTrailingWhitespace = 1
 
 " tagbar
 nmap <Leader>b :TagbarToggle<CR> 
