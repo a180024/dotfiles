@@ -130,6 +130,7 @@ Plug 'scrooloose/syntastic'
 Plug 'romkatv/powerlevel10k'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " fzf
@@ -139,6 +140,7 @@ set rtp+=/usr/local/opt/fzf
 let g:airline_powerline_fonts = 1
 
 " nerdtree tabs
+nmap <Leader>r :NERDTreeFocus<CR>R<c-w><c-p>
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
 
@@ -159,3 +161,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 map <leader>s :SyntasticCheck<CR>
 map <leader>d :SyntasticReset<CR>
+map <leader>e :SyntasticToggleMode<CR>
