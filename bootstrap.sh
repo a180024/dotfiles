@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find ~+ -type f -name ".*" -exec ln -sv {} ~ \;
+find ~+ -name ".*" -exec ln -sv {} ~ \;
 
 #cd ~/
 #git pull origin master
@@ -19,3 +19,6 @@ find ~+ -type f -name ".*" -exec ln -sv {} ~ \;
     #fi;
 #fi;
 #unset sync;
+
+
+

@@ -1,11 +1,52 @@
-#Alias
+# **Aliases**
 alias vb="VBoxManage startvm \"Ubuntu Server 20.4\" --type headless"
 alias xvb="VBoxManage controlvm \"Ubuntu Server 20.4\" poweroff"
 alias sshvm="ssh davinwu@127.0.0.1 -p 2222"
 alias startvagrant="vagrant init ubuntu/trusty32; vagrant up; vagrant ssh"
 alias brewpermission="sudo chown -R $(whoami) $(brew --prefix)/*"
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
 
-#Paths
+# **Shortcuts**
+#for file in ~/.custom_scripts/*; do
+    #if [ -f "$file" ]; then
+        #source "$file";
+    #fi
+#done
+function mkdircd () {
+    mkdir -p "$@" && eval cd "\"\$$#\"";  
+}
+
+function multitail () {
+    # When this exits, exit all background processes too.
+    trap 'kill $(jobs -p)' EXIT
+    for file in "$@"
+    do
+        tail -f $file &
+    done
+    wait #until CTRL+C
+}
+
+function psgrep () {
+    ps aux | grep "$1" | grep -v 'grep'
+}
+
+function psterm() {
+    [ ${#} -eq 0 ] && echo "usage: $FUNCNAME STRING" && return 0
+    local pid
+    pid=$(ps ax | grep "$1" | grep -v grep | awk '{ print $1 }')
+    echo -e "terminating '$1' / process(es):\n$pid"
+    kill -SIGTERM $PID
+}
+
+# **Settings**
+# VIM for bash
+set -o vi
+
+# **Paths**
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -13,28 +54,26 @@ export PATH="/usr/local/opt/dart/libexec:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/bin/python3:$PATH"
 
-#virtualenvwrapper
+# **Virtualenvwrapper**
 export WORKON_HOME=$HOME/Desktop/Programming/.virtualenvs
 export PROJECT_HOME=$HOME/Desktop/Programming
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh 
 
-#GIT Auto-Completion
+# **GIT Auto-Completion**
 source /usr/local/etc/bash_completion.d/git-completion.bash &>/dev/null
 
-# syntax-highlighting
+# **Syntax-highlighting**
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# z- jump around
+# **z- jump around**
 # Move next only if `homebrew` is installed
 if command -v brew >/dev/null 2>&1; then
 	#Load rupa's z if installed
  	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
 fi
 
-#VIM for bash
-set -o vi
-
+# **Powerlevel10k**
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -151,5 +190,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# fzf
+# **fzf**
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

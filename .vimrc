@@ -15,6 +15,9 @@ set shortmess+=I
 " Show line numbers.
 set number
 
+" Allow pasting
+"set paste
+
 " auto-reload.
 augroup myvimrchooks
        	au!
@@ -144,6 +147,7 @@ let g:airline_powerline_fonts = 1
 nmap <Leader>r :NERDTreeFocus<CR>R<c-w><c-p>
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
+" let NERDTreeShowHidden=1
 
 " nerd commenter
 let g:NERDTrimTrailingWhitespace = 1
