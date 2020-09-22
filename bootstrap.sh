@@ -20,5 +20,3 @@ find ~+ -name ".*" -exec ln -sv {} ~ \;
 #fi;
 #unset sync;
 
-
-
