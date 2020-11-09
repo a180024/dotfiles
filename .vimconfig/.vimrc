@@ -1,11 +1,13 @@
 " **GENERAL VIM CONFIG**
 set nocompatible
 "color scheme
-colorscheme onedark
-highlight Normal ctermbg=None
-highlight Linenr ctermfg=DarkGrey
+colorscheme spacecamp
+set background=dark
+" highlight Normal ctermbg=None
+" highlight Linenr ctermfg=DarkGrey
 " Turn on syntax highlighting.
 syntax on
+" let python_highlight_all = 1
 " Disable the default Vim startup message.
 set shortmess+=I
 " Show line numbers.
@@ -17,8 +19,6 @@ augroup myvimrchooks
 augroup END
 
 autocmd BufWritePost .vimrc,_vimrc source $MYVIMRC
-" python
-let python_highlight_all = 1
 " line number
 set relativenumber
 " Always show the status line at the bottom, even if you only have one window open.
@@ -75,37 +75,24 @@ nmap <leader>u :set nopaste<CR>
 " set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
-" indent/unindent with tab/shift-tab
-"nmap <Tab> >>
-"imap <S-Tab> <Esc><<i
-"nmap <S-tab> <<
-" Avoid using arrow keys
-" nnoremap <Left>  :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up>    :echoe "Use k"<CR>
-" nnoremap <Down>  :echoe "Use j"<CR>
-"" ...and in insert mode
-" inoremap <Left>  <ESC>:echoe "Use h"<CR>
-" inoremap <Right> <ESC>:echoe "Use l"<CR>
-" inoremap <Up>    <ESC>:echoe "Use k"<CR>
-" inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " vim tabs
-map <C-y><Up> :tabr<CR>
-map <C-y><Down> :tabl<CR>
-map <C-y><Left> :tabp<CR>
-map <C-y><right> :tabn<CR>
+map <C-z>k :tabr<CR>
+map <C-z>j :tabl<CR>
+map <C-z>h :tabp<CR>
+map <C-z>l :tabn<CR>
 " move through buffers
 nmap <leader>[ :bp!<CR>
 nmap <leader>] :bn!<CR>
 nmap <leader>x :bd<CR>
-" Insert a line above with going into insert mode
+" insert a line above with going into insert mode
 nnoremap <leader>O O<ESC>
-
-
+" auto set working dir
+set autochdir
+" .env 
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 " **VIM PLUG**
 call plug#begin()
-Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
@@ -124,6 +111,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
+Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 " **PLUG SETTINGS**

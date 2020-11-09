@@ -35,7 +35,8 @@ local applicationHotkeys = {
   c = 'Google Chrome',
   t = 'iTerm',
   s = 'Spotify',
-  v = 'Visual Studio Code'
+  v = 'Visual Studio Code',
+  p = 'Postman'
 }
 for key, app in pairs(applicationHotkeys) do
   hs.hotkey.bind(hyper, key, function()

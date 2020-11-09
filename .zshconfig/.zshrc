@@ -12,13 +12,6 @@ alias ..5="cd ../../../../.."
 
 # **Shortcuts**
 
-#for file in ~/.custom_scripts/*; do
-    #if [ -f "$file" ]; then
-        #source "$file";
-    #fi
-#done
-
-# Sorts disk usage for each folder in a directory
 function dudir() {
     du -k -s * | sort -k1 -g -r
 }
@@ -57,23 +50,29 @@ function psterm() {
     kill -SIGTERM $PID
 }
 
+function it2prof() {
+    echo -e "\033]50;SetProfile=$1\a"
+}
+
 # **Settings**
 # VIM for bash
 set -o vi
 
+# Match colorscheme in Tmux
+export TERM=screen-256color
+
 # **Paths**
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/dart/libexec:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/postgresql/bin:$PATH"
+export PATH="/usr/local/opt/mongodb/bin:$PATH"
 
-# **Virtualenvwrapper**
-export WORKON_HOME=$HOME/Desktop/Programming/.virtualenvs
-export PROJECT_HOME=$HOME/Desktop/Programming
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh 
+# pipenv 
+export WORKON_HOME=$HOME/Desktop/DEV/.virtualenvs
+export PROJECT_HOME=$HOME/Desktop/DEV
 
 # **GIT Auto-Completion**
 source /usr/local/etc/bash_completion.d/git-completion.bash &>/dev/null
@@ -205,3 +204,7 @@ source $ZSH/oh-my-zsh.sh
 
 # **fzf**
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
