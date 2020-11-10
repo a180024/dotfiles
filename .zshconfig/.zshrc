@@ -55,24 +55,20 @@ function it2prof() {
 }
 
 # **Settings**
+
 # VIM for bash
 set -o vi
-
-# Match colorscheme in Tmux
-export TERM=screen-256color
 
 # **Paths**
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="/usr/local/opt/dart/libexec:$PATH"
 export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/postgresql/bin:$PATH"
 export PATH="/usr/local/opt/mongodb/bin:$PATH"
 
 # pipenv 
 export WORKON_HOME=$HOME/Desktop/DEV/.virtualenvs
-export PROJECT_HOME=$HOME/Desktop/DEV
 
 # **GIT Auto-Completion**
 source /usr/local/etc/bash_completion.d/git-completion.bash &>/dev/null

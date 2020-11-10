@@ -58,38 +58,19 @@ filetype plugin indent on
 set smartindent
 set autoindent
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" js indentation
-map ,1 :set shiftwidth=2<CR>
-map ,2 :set softtabstop=2<CR>
 " CSS autocompletion
 set omnifunc=syntaxcomplete#Complete
-" terminal config
-nmap <leader>t :term<CR>
-nmap <leader>h :resize 10<CR>
+" window
 set splitbelow
 set termwinsize=10x0
-" pasting
-nmap <leader>p :set paste<CR>
-nmap <leader>u :set nopaste<CR>
 " folding
-" set foldmethod=syntax
 set foldcolumn=1
 set foldlevelstart=99
-" vim tabs
-map <C-z>k :tabr<CR>
-map <C-z>j :tabl<CR>
-map <C-z>h :tabp<CR>
-map <C-z>l :tabn<CR>
-" move through buffers
-nmap <leader>[ :bp!<CR>
-nmap <leader>] :bn!<CR>
-nmap <leader>x :bd<CR>
-" insert a line above with going into insert mode
-nnoremap <leader>O O<ESC>
+" tabs
+map ,t :tabnew 
+map ,e :tabedit
 " auto set working dir
 set autochdir
-" .env 
-autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 " **VIM PLUG**
 call plug#begin()
@@ -97,14 +78,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'preservim/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdcommenter'
-Plug 'lepture/vim-jinja'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
 Plug 'romkatv/powerlevel10k'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -112,6 +90,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'psf/black', { 'branch': 'stable' }
+Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
 " **PLUG SETTINGS**
@@ -120,28 +99,16 @@ set rtp+=/usr/local/opt/fzf
 " powerline fonts
 let g:airline_powerline_fonts = 1
 " nerdtree tabs
-nmap <Leader>r :NERDTreeFocus<CR>R<c-w><c-p>
+map <Leader>N :NERDTreeFocus<CR>R<c-w><c-p>
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
-" let NERDTreeShowHidden=1
 " nerd commenter
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 " tagbar
-nmap <Leader>b :TagbarToggle<CR> 
+nmap <Leader>B :TagbarToggle<CR>
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <leader>E :SyntasticCheck<CR>
-nnoremap <leader>F :SyntasticToggleMode<CR>
 " emmet
 let g:user_emmet_leader_key=','
 " coc nvim
@@ -178,12 +145,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-" Use <c-space> to trigger completion.
-if has('vim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
 " <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
@@ -192,32 +153,9 @@ if exists('*complete_info')
 else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -225,14 +163,6 @@ augroup mygroup
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
@@ -243,34 +173,93 @@ xmap ic <Plug>(coc-classobj-i)
 omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Which Key
+let g:which_key_timeout = 100
+let g:mapleader = "\\"
+let g:maplocalleader = ','
+call which_key#register('\', "g:which_key_map")
+nnoremap <silent> <leader> :<c-u>WhichKey '\'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '\'<CR>
+" Define prefix dictionary
+let g:which_key_map =  {}
+let g:which_key_map['.'] = [ ':e $MYVIMRC' , 'open init' ]
+let g:which_key_map['T'] = [ ':term', 'open terminal' ]
+let g:which_key_map['O'] = [ '<leader>O O<ESC>', 'Insert line above' ]
+let g:which_key_map.b = {
+      \ 'name' : '+buffers' ,
+      \ '[' : [':bp!'                               , 'Previous Buffer'],
+      \ ']' : [':bn!'                               , 'Next Buffer'],
+      \ 'x' : [':bd'                                , 'Delete Buffer'],
+      \ }
+let g:which_key_map.t = {
+      \ 'name' : '+tabs' ,
+      \ 'h' : [':tabfirst'                         , 'First Tab'],
+      \ 'j' : [':tabnext'                          , 'Next Tab'],
+      \ 'k' : [':tabprev'                          , 'Previous Tab'],
+      \ 'l' : [':tablast'                          , 'Last Tab'],
+      \ 'n' : [':tabnew'                           , 'New tab'],
+      \ 'd' : [':tabclose'                         , 'Close Tab'],
+      \ }
+let g:which_key_map.l = {
+      \ 'name' : '+lsp' ,
+      \ '.' : [':CocConfig'                          , 'config'],
+      \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
+      \ 'a' : ['<Plug>(coc-codeaction)'              , 'code action'],
+      \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
+      \ 'b' : [':CocNext'                            , 'next action'],
+      \ 'B' : [':CocPrev'                            , 'prev action'],
+      \ 'c' : [':CocList commands'                   , 'commands'],
+      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
+      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \ 'e' : [':CocList extensions'                 , 'extensions'],
+      \ 'E' : [':Fold'                               , 'fold'],
+      \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
+      \ 'F' : [':Format'                             , 'format'],
+      \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
+      \ 'i' : ['<Plug>(coc-implementation)'          , 'implementation'],
+      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
+      \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
+      \ 'l' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
+      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
+      \ 'o' : [':CocList outline'                    , 'search outline'],
+      \ 'O' : [':OR'                                 , 'organise imports'],
+      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
+      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
+      \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
+      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
+      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 'S' : [':CocList snippets'                   , 'snippets'],
+      \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
+      \ 'u' : [':CocListResume'                      , 'resume list'],
+      \ 'U' : [':CocUpdate'                          , 'update CoC'],
+      \ 'z' : [':CocDisable'                         , 'disable CoC'],
+      \ 'Z' : [':CocEnable'                          , 'enable CoC'],
+      \ }
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 's' : [':!git status'                    , 'Git status'],
+      \ 'd' : [':!git diff'                      , 'Git diff'],
+      \ }
+let g:which_key_map.p = {
+      \ 'name' : '+pasting' ,
+      \ 'p' : [':set paste'                          , 'Set Paste'],
+      \ 'u' : [':set nopaste'                        , 'Undo Paste'],
+      \ }
+let g:which_key_map.w = {
+      \ 'name' : '+window' ,
+      \ 'r' : [':resize 10'                          , 'Resize Window 10x0'],
+      \ }
+let g:which_key_map.i = {
+      \ 'name' : '+indents' ,
+      \ '1' : ['set shiftwidth=2'                    , 'Shift width 2'],
+      \ '2' : ['set softtabstop=2'                   , 'Tab stop 2'],
+      \ }

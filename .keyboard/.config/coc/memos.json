@@ -211,7 +211,7 @@
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
         "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python3",
+        "path": "/usr/local/bin/python3",
         "version": {
           "options": {
             "loose": false,
@@ -228,8 +228,8 @@
           "build": [],
           "version": "3.8.2-final"
         },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "618ca0eed56acef0ace83b3e8b6bd2b9f4b007082bb22369801982fcf331f8df3f7ad1df8f8bceb97af7c60de37065bc0db22489b248f4b4028d57a5d8823557",
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f",
         "type": "Unknown"
       },
       {
@@ -257,29 +257,6 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
         "path": "/usr/local/bin/python",
         "version": {
           "options": {
@@ -299,6 +276,29 @@
         },
         "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
+        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
         "type": "Unknown"
       }
     ],
@@ -309,144 +309,6 @@
       "expiry": 1604866944626
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
-      {
-        "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "618ca0eed56acef0ace83b3e8b6bd2b9f4b007082bb22369801982fcf331f8df3f7ad1df8f8bceb97af7c60de37065bc0db22489b248f4b4028d57a5d8823557",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "6dc3dd3e1516bc91cd15cd47aaccf635602a09f2eba45fc308d5c6bf44ea0e2bc153101e000a17db5a5615e7f7124936d6dfca00b71289e1529482a459a6e7fc",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/usr/local/bin/python",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/usr/local/bin/python3",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f",
-        "type": "Unknown"
-      },
-      {
-        "architecture": 3,
-        "path": "/usr/local/bin/python3.8",
-        "version": {
-          "options": {
-            "loose": false,
-            "includePrerelease": false
-          },
-          "loose": false,
-          "raw": "3.8.2-final",
-          "major": 3,
-          "minor": 8,
-          "patch": 2,
-          "prerelease": [
-            "final"
-          ],
-          "build": [],
-          "version": "3.8.2-final"
-        },
-        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
-        "fileHash": "5befd0f4a5ad003e98b29e091742d26da0c4144b0f78e912e649ecaf720372f62339878c69f7b1b045f3a8d9005042520f435166cf8be87800a2c1f460ff27bb",
-        "type": "Unknown"
-      },
       {
         "architecture": 3,
         "path": "/usr/local/bin/python",
@@ -2316,9 +2178,9 @@
           "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00"
+        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c"
       },
-      "expiry": 1605026068741
+      "expiry": 1605091771300
     },
     "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python3.v3": {
       "data": {
@@ -2365,13 +2227,13 @@
         "version": "3.8.2-final"
       },
       "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-      "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+      "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
       "type": "PipEnv",
       "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test"
     },
     "InterpreterAutoSeletionRule-currentPath": {
       "architecture": 3,
-      "path": "/usr/local/bin/python",
+      "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
       "version": {
         "options": {
           "loose": false,
@@ -2388,16 +2250,16 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
-      "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
+      "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
+      "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
       "type": "Unknown"
     },
     "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit ('test': pipenv)",
-        "hash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00-a7bcc759e431151391666a9311778d46"
+        "hash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c-4ff193d2e718b397f2ca99e945a48bb1"
       },
-      "expiry": 1605026310764
+      "expiry": 1605092136621
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
@@ -2425,7 +2287,7 @@
     },
     "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python.interpreter.Details.v7": {
       "data": {
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
         "info": {
           "architecture": 3,
           "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
@@ -2446,14 +2308,14 @@
             "version": "3.8.2-final"
           },
           "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-          "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+          "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
           "type": "PipEnv",
           "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test",
           "envName": "test",
           "displayName": "Python 3.8.2 64-bit ('test': pipenv)"
         }
       },
-      "expiry": 1605026310799
+      "expiry": 1605092136649
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
@@ -3170,7 +3032,7 @@
           "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test"
       }
@@ -3196,7 +3058,7 @@
         "version": "3.8.2-final"
       },
       "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-      "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+      "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
       "type": "PipEnv",
       "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test"
     },
@@ -3222,10 +3084,40 @@
           "version": "3.8.2-final"
         },
         "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "4453443ae2a9ecae97fdf01a0baecff14af176ab45fd947825a8206cbc8e22474c70e444490bc8cb033ae8aa8c44676e08d92cf2d45065b81a56f265aeda4e00",
+        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
         "type": "PipEnv",
         "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test"
       }
     ]
+  },
+  "coc-python|/Users/davin/Desktop/DEV": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:40c8e6e80587a713c60aeec38598f8de": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:40c8e6e80587a713c60aeec38598f8de": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/davin/Desktop/DEV": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }
 }
