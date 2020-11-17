@@ -29,7 +29,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "40ce618be2f89e5729d0563e99e6789d74471f41c92ea16e1a7b7e672431f2aebfd200bb87acccab9e4bde1098b0b9ebc32b5d57d1acfc0b703025b39b9da8a5"
       },
-      "expiry": 1605024030234
+      "expiry": 1605356525508
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -54,7 +54,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "879a660e0738381bb1b03fbdc8bcdffc85676b33424dc03e8c03701a16801c970a4645bd53691c6a5728304532ee3ea70914d22e7ba16e80c825e3b7b19ca0bd"
       },
-      "expiry": 1605024030238
+      "expiry": 1605356525487
     },
     "/usr/local/bin/python3.7.v3": {
       "data": {
@@ -106,7 +106,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "6bf3dea0b096197f1b629c4d352799f0a0ac8a99c8cd50262a881beaca59135a1d9ba35703c03ffaba29364a30441a087ac0d620f5e2e831b882b4020de11ea8"
       },
-      "expiry": 1605024030239
+      "expiry": 1605356525503
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.v3": {
       "data": {
@@ -131,7 +131,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "82733ef1e2f1bc8f19151ed89643e5b5a43d85ad0ba7a1beb45d46f2383e2e0390382718c7af3c24855338e2821cc7de7b56ba38851e9a1d9d20780cd76aa126"
       },
-      "expiry": 1605024030248
+      "expiry": 1605356525534
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -156,7 +156,7 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7",
         "fileHash": "c96298ea2eb6144739cbc5e7528edc1b94cd95c1ef33ff441e586bc0997896c994588cfe651537c721f645ab30a58262ac989d9042087d657739aaf7bbe9220c"
       },
-      "expiry": 1605024030263
+      "expiry": 1605356525523
     },
     "/usr/local/bin/python3.8.v3": {
       "data": {
@@ -181,7 +181,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "5befd0f4a5ad003e98b29e091742d26da0c4144b0f78e912e649ecaf720372f62339878c69f7b1b045f3a8d9005042520f435166cf8be87800a2c1f460ff27bb"
       },
-      "expiry": 1605024030255
+      "expiry": 1605356525506
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -206,7 +206,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f"
       },
-      "expiry": 1605024030250
+      "expiry": 1605356525517
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -280,7 +280,7 @@
       },
       {
         "architecture": 3,
-        "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
+        "path": "/usr/local/bin/python3",
         "version": {
           "options": {
             "loose": false,
@@ -297,8 +297,8 @@
           "build": [],
           "version": "3.8.2-final"
         },
-        "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-        "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
+        "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
+        "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f",
         "type": "Unknown"
       }
     ],
@@ -306,7 +306,7 @@
       "data": {
         "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f"
       },
-      "expiry": 1604866944626
+      "expiry": 1605356525585
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
@@ -770,19 +770,13 @@
         "type": "Unknown"
       }
     ],
-    "PipEnvInformation": [
-      {
-        "pythonPath": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
-        "workspaceFolder": "/Users/davin/Desktop/DEV/test",
-        "envName": "test"
-      }
-    ],
+    "PipEnvInformation": [],
     "/usr/local/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f-71fe4d2de44aae184ac076b714121545"
       },
-      "expiry": 1604866944645
+      "expiry": 1605356525700
     },
     "/usr/local/bin/python3.7.interpreter.displayName.v7": {
       "data": {
@@ -796,21 +790,21 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "879a660e0738381bb1b03fbdc8bcdffc85676b33424dc03e8c03701a16801c970a4645bd53691c6a5728304532ee3ea70914d22e7ba16e80c825e3b7b19ca0bd-38ca097e8c3a9e021a9be861e347c2a4"
       },
-      "expiry": 1605024030340
+      "expiry": 1605356525574
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.7.3 64-bit",
         "hash": "c96298ea2eb6144739cbc5e7528edc1b94cd95c1ef33ff441e586bc0997896c994588cfe651537c721f645ab30a58262ac989d9042087d657739aaf7bbe9220c-7e46628cc0f1922b8c64e711f4947e8d"
       },
-      "expiry": 1605024030345
+      "expiry": 1605356525576
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "82733ef1e2f1bc8f19151ed89643e5b5a43d85ad0ba7a1beb45d46f2383e2e0390382718c7af3c24855338e2821cc7de7b56ba38851e9a1d9d20780cd76aa126-830802b02273decc579a0292174f88dd"
       },
-      "expiry": 1605024030347
+      "expiry": 1605356525578
     },
     "/usr/local/bin/python3.7.interpreter.Details.v7": {
       "data": {
@@ -870,7 +864,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1605024030364
+      "expiry": 1605356525600
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -900,7 +894,7 @@
           "displayName": "Python 3.7.3 64-bit"
         }
       },
-      "expiry": 1605024030372
+      "expiry": 1605356525605
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -930,7 +924,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1605024030376
+      "expiry": 1605356525609
     },
     "ProposeLSBanner": false,
     "/usr/local/bin/python.v3": {
@@ -956,14 +950,14 @@
         "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12"
       },
-      "expiry": 1605024030262
+      "expiry": 1605356525515
     },
     "/usr/local/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12-ec0819efa3ef789675ea894041e5523d"
       },
-      "expiry": 1605024030343
+      "expiry": 1605356525572
     },
     "/usr/local/bin/python.interpreter.Details.v7": {
       "data": {
@@ -993,7 +987,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1605024030368
+      "expiry": 1605356525594
     },
     "/Users/davin/Desktop/Programming/.virtualenvs/ecom/bin/python3.8.v3": {
       "data": {
@@ -2207,83 +2201,12 @@
       },
       "expiry": 1605026068795
     },
-    "InterpreterAutoSeletionRule-workspaceEnvs": {
-      "architecture": 3,
-      "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.8.2-final",
-        "major": 3,
-        "minor": 8,
-        "patch": 2,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.8.2-final"
-      },
-      "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-      "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
-      "type": "PipEnv",
-      "pipEnvWorkspaceFolder": "/Users/davin/Desktop/DEV/test"
-    },
-    "InterpreterAutoSeletionRule-currentPath": {
-      "architecture": 3,
-      "path": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.8.2-final",
-        "major": 3,
-        "minor": 8,
-        "patch": 2,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.8.2-final"
-      },
-      "sysPrefix": "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy",
-      "fileHash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c",
-      "type": "Unknown"
-    },
     "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit ('test': pipenv)",
         "hash": "d378475521d5e669ea8294aaaa4003d979f71bbd240c24d5157493fa5dd6e3057f9dde2a4a549e7ba351e6b61c5bd511ad6fce24fff3f82ceb5e6a0d3f94a79c-4ff193d2e718b397f2ca99e945a48bb1"
       },
       "expiry": 1605092136621
-    },
-    "InterpreterAutoSeletionRule-system": {
-      "architecture": 3,
-      "path": "/usr/local/bin/python",
-      "version": {
-        "options": {
-          "loose": false,
-          "includePrerelease": false
-        },
-        "loose": false,
-        "raw": "3.8.2-final",
-        "major": 3,
-        "minor": 8,
-        "patch": 2,
-        "prerelease": [
-          "final"
-        ],
-        "build": [],
-        "version": "3.8.2-final"
-      },
-      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
-      "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
-      "type": "Unknown",
-      "displayName": "Python 3.8.2 64-bit"
     },
     "/Users/davin/Desktop/DEV/.virtualenvs/test-ia2wRvJy/bin/python.interpreter.Details.v7": {
       "data": {
@@ -2317,7 +2240,7 @@
       },
       "expiry": 1605092136649
     },
-    "InterpreterAutoSeletionRule-cachedInterpreters": {
+    "preferredGlobalPyInterpreter": {
       "architecture": 3,
       "path": "/usr/local/bin/python",
       "version": {
@@ -2341,7 +2264,54 @@
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     },
-    "preferredGlobalPyInterpreter": {
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "2a9609188dc98f0f2f050b4ca8fa7c4cd0e55c876289ad7af49de2da3e7bed4545fbe2443eee52177eeccc717f2a57bd1129e84930355fdb90f267b6940fc80f",
+      "type": "Unknown"
+    },
+    "InterpreterAutoSeletionRule-system": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
       "path": "/usr/local/bin/python",
       "version": {
@@ -3117,6 +3087,54 @@
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/davin/Desktop/DEV/AWS/workshop-eventDrivenMicroservices": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:a172c7c1e4d58fc979ff381a0e919093": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:a172c7c1e4d58fc979ff381a0e919093": [],
+    "autoSelectedWorkspacePythonInterpreter-/Users/davin/Desktop/DEV/AWS/workshop-eventDrivenMicroservices": {
+      "architecture": 3,
+      "path": "/usr/local/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.8.2-final",
+        "major": 3,
+        "minor": 8,
+        "patch": 2,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.8.2-final"
+      },
+      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
+      "fileHash": "f174725be3852cb75aaf0f35cac8f5caff8aacf41ef009170d71b2f4321633bf5474d16d0d02fa7cd54da87309fd37737bdc2826b6b8903314ce06ddc2866f12",
+      "type": "Unknown",
+      "displayName": "Python 3.8.2 64-bit"
+    },
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/davin/Desktop/DEV/AWS": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:8d305fef0b0bd15968108ae85842b56b": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:8d305fef0b0bd15968108ae85842b56b": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/davin/Desktop/CS/python": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:acf868bdfff17959cf9a3afbe3b70681": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:acf868bdfff17959cf9a3afbe3b70681": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/Users/davin/Desktop/dynamodb": {
+    "INTERPRETERS_CACHE_v3_PipEnvService:318db46985e78d35c59a66dd97b7dc31": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:318db46985e78d35c59a66dd97b7dc31": [],
     "INTERPRETERS_CACHE_v3_PipEnvService": [],
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
   }

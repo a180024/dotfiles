@@ -1,6 +1,6 @@
+python.setInterpreter
 editor.action.organizeImport
 explorer
 python.upgradePythonLanguageServer
-python.setInterpreter
 python.setLinter
 workspace.clearWatchman

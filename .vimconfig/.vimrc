@@ -3,8 +3,9 @@ set nocompatible
 "color scheme
 colorscheme spacecamp
 set background=dark
-" highlight Normal ctermbg=None
-" highlight Linenr ctermfg=DarkGrey
+set t_Co=256
+highlight Normal ctermbg=None
+highlight Linenr ctermfg=DarkGrey
 " Turn on syntax highlighting.
 syntax on
 " let python_highlight_all = 1
@@ -51,12 +52,14 @@ set fileencoding=utf-8
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=0
 set colorcolumn=80
 set viminfo='25,\"50,n~/.viminfo
 filetype plugin indent on
 set smartindent
 set autoindent
+autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " CSS autocompletion
 set omnifunc=syntaxcomplete#Complete
@@ -69,8 +72,12 @@ set foldlevelstart=99
 " tabs
 map ,t :tabnew 
 map ,e :tabedit
+" Insert line above with going into insert mode
+nmap <leader>O O<ESC>
 " auto set working dir
 set autochdir
+" curly braces automatically inset new line
+autocmd FileType c,javascript inoremap {<Cr> {<CR>}<ESC>O
 
 " **VIM PLUG**
 call plug#begin()
@@ -86,7 +93,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'romkatv/powerlevel10k'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'psf/black', { 'branch': 'stable' }
@@ -99,8 +105,8 @@ set rtp+=/usr/local/opt/fzf
 " powerline fonts
 let g:airline_powerline_fonts = 1
 " nerdtree tabs
-map <Leader>N :NERDTreeFocus<CR>R<c-w><c-p>
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <Leader>F :NERDTreeFocus<CR>R<c-w><c-p>
+map <Leader>N <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
 " nerd commenter
 let g:NERDTrimTrailingWhitespace = 1
@@ -189,9 +195,9 @@ nnoremap <silent> <leader> :<c-u>WhichKey '\'<CR>
 vnoremap <silent> <leader> :<c-u>WhichKeyVisual '\'<CR>
 " Define prefix dictionary
 let g:which_key_map =  {}
-let g:which_key_map['.'] = [ ':e $MYVIMRC' , 'open init' ]
-let g:which_key_map['T'] = [ ':term', 'open terminal' ]
-let g:which_key_map['O'] = [ '<leader>O O<ESC>', 'Insert line above' ]
+let g:which_key_map['.'] = [ ':e $MYVIMRC' , 'vimrc' ]
+let g:which_key_map['E'] = [ ':exit' , 'exit vim window' ]
+let g:which_key_map['T'] = [ ':term', 'terminal' ]
 let g:which_key_map.b = {
       \ 'name' : '+buffers' ,
       \ '[' : [':bp!'                               , 'Previous Buffer'],
@@ -257,9 +263,4 @@ let g:which_key_map.p = {
 let g:which_key_map.w = {
       \ 'name' : '+window' ,
       \ 'r' : [':resize 10'                          , 'Resize Window 10x0'],
-      \ }
-let g:which_key_map.i = {
-      \ 'name' : '+indents' ,
-      \ '1' : ['set shiftwidth=2'                    , 'Shift width 2'],
-      \ '2' : ['set softtabstop=2'                   , 'Tab stop 2'],
       \ }
