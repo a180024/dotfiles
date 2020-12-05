@@ -26,5 +26,10 @@
     "%2FUsers%2Fdavin%2FDesktop": [
       "trg"
     ]
+  },
+  "snippets": {
+    "%2FUsers%2Fdavin%2FDesktop": [
+      "print"
+    ]
   }
 }

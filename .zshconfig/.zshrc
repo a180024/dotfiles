@@ -4,11 +4,6 @@ alias xvb="VBoxManage controlvm \"Ubuntu Server 20.4\" poweroff"
 alias sshvm="ssh davinwu@127.0.0.1 -p 2222"
 alias startvagrant="vagrant init ubuntu/trusty32; vagrant up; vagrant ssh"
 alias brewpermission="sudo chown -R $(whoami) $(brew --prefix)/*"
-alias ..="cd .."
-alias ..2="cd ../.."
-alias ..3="cd ../../.."
-alias ..4="cd ../../../.."
-alias ..5="cd ../../../../.."
 
 # Shortcuts
 function dudir() {
@@ -56,11 +51,19 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/postgresql/bin:$PATH"
 export PATH="/usr/local/opt/mongodb/bin:$PATH"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Pipenv 
 export WORKON_HOME=$HOME/Desktop/DEV/.virtualenvs
 
 # GIT Auto-Completion
-source $HOME/git-completion.bash 
+zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
+# `compinit` scans $fpath, so do this before calling it.
+fpath=(~/.dotfiles/.zshconfig $fpath)
+autoload -Uz compinit && compinit
 
 # Syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -86,15 +89,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(
-git
 zsh-autosuggestions
+fzf
 )
+
+# fzf plugin
+export FZF_BASE=$HOME/.fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 source $ZSH/oh-my-zsh.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -42,8 +42,6 @@ set noerrorbells visualbell t_vb=
 set mouse+=a
 " restore place in file from previous session
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-" auto-save buffer
-autocmd TextChanged,TextChangedI <buffer> silent write
 " sane text files
 set fileformat=unix
 set encoding=utf-8
@@ -67,8 +65,8 @@ set omnifunc=syntaxcomplete#Complete
 set splitbelow
 set termwinsize=10x0
 " folding
-set foldcolumn=1
-set foldlevelstart=99
+" set foldcolumn=1
+" set foldlevelstart=99
 " tabs
 map ,t :tabnew 
 map ,e :tabedit
@@ -82,6 +80,7 @@ autocmd FileType c,javascript inoremap {<Cr> {<CR>}<ESC>O
 " **VIM PLUG**
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -96,6 +95,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'psf/black', { 'branch': 'stable' }
+Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
 call plug#end()
 
@@ -117,6 +117,8 @@ nmap <Leader>B :TagbarToggle<CR>
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 " emmet
 let g:user_emmet_leader_key=','
+" vim auto save
+" let g:auto_save = 1
 " coc nvim
 " TextEdit might fail if hidden is not set.
 set hidden
