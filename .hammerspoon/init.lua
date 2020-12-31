@@ -39,7 +39,7 @@ hs.window.animationDuration = 0
 
 local applicationHotkeys = {
   c = 'Google Chrome',
-  s = 'Safari'
+  s = 'Safari',
   t = 'iTerm',
   x = 'Slack',
   m = 'Spotify',
