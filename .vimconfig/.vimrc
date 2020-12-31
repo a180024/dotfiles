@@ -56,17 +56,23 @@ set viminfo='25,\"50,n~/.viminfo
 filetype plugin indent on
 set smartindent
 set autoindent
-autocmd FileType html setlocal ts=2 sts=2 sw=2
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType html javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+nnoremap ,1 :set tabstop=2<CR>
+nnoremap ,2 :set shiftwidth=2<CR>
 " CSS autocompletion
 set omnifunc=syntaxcomplete#Complete
+" folds
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+nnoremap ,m :mkview<CR>
+nnoremap ,l :loadview<CR>
 " window
 set splitbelow
 set termwinsize=10x0
-" folding
-" set foldcolumn=1
-" set foldlevelstart=99
 " tabs
 map ,t :tabnew 
 map ,e :tabedit
@@ -75,7 +81,7 @@ nmap <leader>O O<ESC>
 " auto set working dir
 set autochdir
 " curly braces automatically inset new line
-autocmd FileType c,javascript inoremap {<Cr> {<CR>}<ESC>O
+" autocmd FileType c,javascript inoremap {<Cr> {<CR>}<ESC>O
 
 " **VIM PLUG**
 call plug#begin()
@@ -88,7 +94,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'romkatv/powerlevel10k'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -97,6 +102,7 @@ Plug 'mattn/emmet-vim'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " **PLUG SETTINGS**
@@ -244,7 +250,7 @@ let g:which_key_map.l = {
       \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
       \ 'r' : ['<Plug>(coc-references)'              , 'references'],
       \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
-      \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 's' : [':CocList -I symbols'                 , 'symbols'],
       \ 'S' : [':CocList snippets'                   , 'snippets'],
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
       \ 'u' : [':CocListResume'                      , 'resume list'],

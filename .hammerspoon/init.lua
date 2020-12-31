@@ -29,7 +29,7 @@ hs.hotkey.bind(hyper, '2', baseMove(0.5, 0, 0.5, 0.5))
 hs.hotkey.bind(hyper, '3', baseMove(0, 0.5, 0.5, 0.5))
 hs.hotkey.bind(hyper, '4', baseMove(0.5, 0.5, 0.5, 0.5))
 
-hs.hotkey.bind(hyper, "m", function() 
+hs.hotkey.bind(hyper, "g", function() 
   local win = hs.window.focusedWindow(); 
   if not win then 
   return end win:moveToUnit(hs.layout.maximized) 
@@ -39,8 +39,10 @@ hs.window.animationDuration = 0
 
 local applicationHotkeys = {
   c = 'Google Chrome',
+  s = 'Safari'
   t = 'iTerm',
-  s = 'Spotify',
+  x = 'Slack',
+  m = 'Spotify',
   p = 'Postman',
   o = 'Microsoft Outlook'
 }
