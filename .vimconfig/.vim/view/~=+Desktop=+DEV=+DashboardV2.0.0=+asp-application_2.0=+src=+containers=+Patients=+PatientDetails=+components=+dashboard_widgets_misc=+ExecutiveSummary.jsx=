@@ -173,12 +173,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 368 - ((18 * winheight(0) + 21) / 43)
+let s:l = 368 - ((25 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 368
-normal! 05|
+normal! 036|
 lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

@@ -1,11 +1,17 @@
 " **GENERAL VIM CONFIG**
 set nocompatible
 "color scheme
-colorscheme spacecamp
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+colorscheme onedark 
 set background=dark
 set t_Co=256
 highlight Normal ctermbg=None
 highlight Linenr ctermfg=DarkGrey
+let g:airline_theme='onedark'
 " Turn on syntax highlighting.
 syntax on
 " let python_highlight_all = 1
@@ -91,7 +97,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'preservim/nerdcommenter'
-Plug 'majutsushi/tagbar'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'romkatv/powerlevel10k'
@@ -118,9 +123,6 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
-" tagbar
-nmap <Leader>B :TagbarToggle<CR>
-let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 " emmet
 let g:user_emmet_leader_key=','
 " vim auto save
