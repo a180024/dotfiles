@@ -53,7 +53,7 @@ let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
-setlocal autoindent
+setlocal noautoindent
 setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
@@ -84,7 +84,7 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal expandtab
+setlocal noexpandtab
 if &filetype != ''
 setlocal filetype=
 endif
@@ -174,12 +174,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 46 - ((0 * winheight(0) + 21) / 43)
+let s:l = 352 - ((51 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-46
-normal! 0
+352
+normal! 013|
 lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

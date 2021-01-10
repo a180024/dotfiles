@@ -161,7 +161,7 @@ setlocal tagfunc=
 setlocal tags=
 setlocal termwinkey=
 setlocal termwinscroll=10000
-setlocal termwinsize=10x146
+setlocal termwinsize=10x126
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
@@ -173,13 +173,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 1 - ((0 * winheight(0) + 5) / 10)
+let s:l = 3 - ((1 * winheight(0) + 5) / 10)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
+3
+normal! 011|
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

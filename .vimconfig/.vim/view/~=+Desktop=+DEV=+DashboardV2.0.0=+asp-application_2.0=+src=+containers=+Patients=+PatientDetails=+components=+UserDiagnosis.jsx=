@@ -148,7 +148,7 @@ setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal spelloptions=
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(3)
 setlocal suffixesadd=.js,.jsx,.es,.es6,.cjs,.mjs,.jsm,.vue,.json
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -174,12 +174,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 62 - ((22 * winheight(0) + 21) / 43)
+let s:l = 429 - ((41 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-62
-normal! 022|
+429
+normal! 016|
 lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

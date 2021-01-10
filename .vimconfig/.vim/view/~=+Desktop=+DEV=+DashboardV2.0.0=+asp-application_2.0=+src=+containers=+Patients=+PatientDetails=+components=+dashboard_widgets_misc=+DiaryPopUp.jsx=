@@ -136,7 +136,7 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=4
+setlocal shiftwidth=2
 setlocal noshortname
 setlocal showbreak=
 setlocal sidescrolloff=-1
@@ -155,7 +155,7 @@ setlocal synmaxcol=3000
 if &syntax != 'javascriptreact'
 setlocal syntax=javascriptreact
 endif
-setlocal tabstop=4
+setlocal tabstop=2
 setlocal tagcase=
 setlocal tagfunc=
 setlocal tags=
@@ -174,12 +174,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 271 - ((23 * winheight(0) + 21) / 43)
+let s:l = 538 - ((40 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-271
-normal! 026|
+538
+normal! 07|
 lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

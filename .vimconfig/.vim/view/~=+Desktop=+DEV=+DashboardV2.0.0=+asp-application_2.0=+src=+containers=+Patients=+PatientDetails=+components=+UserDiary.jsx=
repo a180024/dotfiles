@@ -81,7 +81,7 @@ setlocal nocursorline
 setlocal cursorlineopt=both
 setlocal define=\\(^\\s*(*async\\s\\+function\\|(*function\\)\\|^\\s*\\(\\*\\|static\\|async\\|get\\|set\\|\\i\\+\\.\\)\\|^\\s*\\(\\ze\\i\\+\\)\\(([^)]*).*{$\\|\\s*[:=,]\\)\\|^\\s*\\(export\\s\\+\\|export\\s\\+default\\s\\+\\)*\\(var\\|let\\|const\\|function\\|class\\)\\|\\<as\\>
 setlocal dictionary=
-setlocal diff
+setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
@@ -170,15 +170,15 @@ setlocal varsofttabstop=
 setlocal vartabstop=
 setlocal wincolor=
 setlocal nowinfixheight
-setlocal winfixwidth
+setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 192 - ((20 * winheight(0) + 21) / 43)
+let s:l = 12 - ((11 * winheight(0) + 37) / 74)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-192
-normal! 026|
+12
+normal! 0
 lcd ~/Desktop/DEV/DashboardV2.0.0/asp-application_2.0/src/containers/Patients/PatientDetails/components
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

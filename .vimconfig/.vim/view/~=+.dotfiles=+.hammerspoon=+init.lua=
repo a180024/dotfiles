@@ -2,48 +2,48 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <buffer> <silent> <M-n> :call AutoPairsJump()a
-inoremap <buffer> <silent> <expr> <M-p> AutoPairsToggle()
-inoremap <buffer> <silent> <M-b> =AutoPairsBackInsert()
-inoremap <buffer> <silent> <M-e> =AutoPairsFastWrap()
-inoremap <buffer> <silent> <C-H> =AutoPairsDelete()
-inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-inoremap <buffer> <silent> <M-'> =AutoPairsMoveCharacter('''')
-inoremap <buffer> <silent> <M-"> =AutoPairsMoveCharacter('"')
-inoremap <buffer> <silent> <M-}> =AutoPairsMoveCharacter('}')
-inoremap <buffer> <silent> <M-{> =AutoPairsMoveCharacter('{')
-inoremap <buffer> <silent> <M-]> =AutoPairsMoveCharacter(']')
-inoremap <buffer> <silent> <M-[> =AutoPairsMoveCharacter('[')
-inoremap <buffer> <silent> <M-)> =AutoPairsMoveCharacter(')')
 inoremap <buffer> <silent> <M-(> =AutoPairsMoveCharacter('(')
-inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
-inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
-inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
+inoremap <buffer> <silent> <M-)> =AutoPairsMoveCharacter(')')
+inoremap <buffer> <silent> <M-[> =AutoPairsMoveCharacter('[')
+inoremap <buffer> <silent> <M-]> =AutoPairsMoveCharacter(']')
+inoremap <buffer> <silent> <M-{> =AutoPairsMoveCharacter('{')
+inoremap <buffer> <silent> <M-}> =AutoPairsMoveCharacter('}')
+inoremap <buffer> <silent> <M-"> =AutoPairsMoveCharacter('"')
+inoremap <buffer> <silent> <M-'> =AutoPairsMoveCharacter('''')
+inoremap <buffer> <silent> <BS> =AutoPairsDelete()
+inoremap <buffer> <silent> <C-H> =AutoPairsDelete()
+inoremap <buffer> <silent> <M-e> =AutoPairsFastWrap()
+inoremap <buffer> <silent> <M-b> =AutoPairsBackInsert()
+inoremap <buffer> <silent> <expr> <M-p> AutoPairsToggle()
+inoremap <buffer> <silent> <M-n> :call AutoPairsJump()a
 inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
-inoremap <buffer> <silent> î :call AutoPairsJump()a
-inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
-inoremap <buffer> <silent> â =AutoPairsBackInsert()
-inoremap <buffer> <silent> å =AutoPairsFastWrap()
-inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
-inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
-inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
+inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
+inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
+inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
+inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
+inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
+inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
+inoremap <buffer> <silent> å =AutoPairsFastWrap()
+inoremap <buffer> <silent> â =AutoPairsBackInsert()
+inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
+inoremap <buffer> <silent> î :call AutoPairsJump()a
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-nmap <buffer> \hp <Plug>(GitGutterPreviewHunk)
-nmap <buffer> \hu <Plug>(GitGutterUndoHunk)
-nmap <buffer> \hs <Plug>(GitGutterStageHunk)
 xmap <buffer> \hs <Plug>(GitGutterStageHunk)
+nmap <buffer> \hs <Plug>(GitGutterStageHunk)
+nmap <buffer> \hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> \hp <Plug>(GitGutterPreviewHunk)
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-noremap <buffer> <silent> <M-n> :call AutoPairsJump()
 noremap <buffer> <silent> <M-p> :call AutoPairsToggle()
+noremap <buffer> <silent> <M-n> :call AutoPairsJump()
 inoremap <buffer> <silent>  =AutoPairsDelete()
 inoremap <buffer> <silent>   =AutoPairsSpace()
 inoremap <buffer> <silent> " =AutoPairsInsert('"')
 inoremap <buffer> <silent> ' =AutoPairsInsert('''')
 inoremap <buffer> <silent> ( =AutoPairsInsert('(')
 inoremap <buffer> <silent> ) =AutoPairsInsert(')')
-noremap <buffer> <silent> î :call AutoPairsJump()
 noremap <buffer> <silent> ð :call AutoPairsToggle()
+noremap <buffer> <silent> î :call AutoPairsJump()
 inoremap <buffer> <silent> [ =AutoPairsInsert('[')
 inoremap <buffer> <silent> ] =AutoPairsInsert(']')
 inoremap <buffer> <silent> ` =AutoPairsInsert('`')
@@ -53,7 +53,7 @@ let &cpo=s:cpo_save
 unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
-setlocal autoindent
+setlocal noautoindent
 setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
@@ -84,7 +84,7 @@ setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
-setlocal expandtab
+setlocal noexpandtab
 if &filetype != 'lua'
 setlocal filetype=lua
 endif
@@ -136,7 +136,7 @@ setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal scrolloff=-1
-setlocal shiftwidth=4
+setlocal shiftwidth=2
 setlocal noshortname
 setlocal showbreak=
 setlocal sidescrolloff=-1
@@ -155,7 +155,7 @@ setlocal synmaxcol=3000
 if &syntax != 'lua'
 setlocal syntax=lua
 endif
-setlocal tabstop=4
+setlocal tabstop=2
 setlocal tagcase=
 setlocal tagfunc=
 setlocal tags=
@@ -174,11 +174,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 21) / 43)
+let s:l = 61 - ((60 * winheight(0) + 40) / 80)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
+61
 normal! 0
 let &g:so = s:so_save | let &g:siso = s:siso_save
 doautoall SessionLoadPost

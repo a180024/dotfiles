@@ -37,6 +37,16 @@ end)
 
 hs.window.animationDuration = 0
 
+function moveWindowToDisplay(d)
+	return function()
+		local displays = hs.screen.allScreens()
+		local win = hs.window.focusedWindow()
+		win:moveToScreen(displays[d], false, true)
+	end
+end
+hs.hotkey.bind(hyper, "[", moveWindowToDisplay(1))
+hs.hotkey.bind(hyper, "]", moveWindowToDisplay(2))
+
 local applicationHotkeys = {
   c = 'Google Chrome',
   s = 'Safari',
