@@ -47,11 +47,21 @@ end
 hs.hotkey.bind(hyper, "[", moveWindowToDisplay(1))
 hs.hotkey.bind(hyper, "]", moveWindowToDisplay(2))
 
+hs.hotkey.bind(hyper, '\\', function()
+    local screen = hs.mouse.getCurrentScreen()
+    local nextScreen = screen:next()
+    local rect = nextScreen:fullFrame()
+    local center = hs.geometry.rectMidPoint(rect)
+
+    hs.mouse.setAbsolutePosition(center)
+		hs.eventtap.leftClick(center)
+end)
+
 local applicationHotkeys = {
   c = 'Google Chrome',
-  s = 'Safari',
+  b = 'Brave Browser',
   t = 'iTerm',
-  x = 'Slack',
+  s = 'Slack',
   m = 'Spotify',
   p = 'Postman',
   o = 'Microsoft Outlook'

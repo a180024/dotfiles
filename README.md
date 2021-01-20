@@ -10,7 +10,6 @@ Install the following:
 - FZF
 - fd
 
-Then, copy the config files.
 ```
 $ mkdir .dotfiles
 $ cd .dotfiles
