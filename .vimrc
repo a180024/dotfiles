@@ -87,6 +87,8 @@ map ,e :tabedit
 nmap <leader>O O<ESC>
 " auto set working dir
 set autochdir
+" Run Black on save.
+autocmd BufWritePre *.py :Black
 
 " **VIM PLUG**
 call plug#begin()
@@ -103,7 +105,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-Plug 'psf/black', { 'branch': 'stable' }
+Plug 'psf/black', {'branch': 'stable'}
 Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
@@ -274,3 +276,4 @@ let g:which_key_map.w = {
       \ 'name' : '+window' ,
       \ 'r' : [':resize 10'                          , 'Resize Window 10x0'],
       \ }
+
