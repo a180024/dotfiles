@@ -40,6 +40,11 @@ function it2prof() {
     echo -e "\033]50;SetProfile=$1\a"
 }
 
+function gd() {
+    preview="git diff $@ --color=always -- {-1}"
+    git diff $@ --name-only | fzf -m --ansi --preview $preview
+}
+
 # VIM for bash
 set -o vi
 
@@ -102,5 +107,3 @@ source $ZSH/oh-my-zsh.sh
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
