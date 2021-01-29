@@ -36,10 +36,6 @@ function psterm() {
     kill -SIGTERM $PID
 }
 
-function it2prof() {
-    echo -e "\033]50;SetProfile=$1\a"
-}
-
 function gd() {
     preview="git diff $@ --color=always -- {-1}"
     git diff $@ --name-only | fzf -m --ansi --preview $preview
@@ -106,4 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+GITSTATUS_LOG_LEVEL=DEBUG
 
+# Homebrew
+eval $(/opt/homebrew/bin/brew shellenv)

@@ -62,7 +62,7 @@ set viminfo='25,\"50,n~/.viminfo
 filetype plugin indent on
 set smartindent
 set autoindent
-autocmd FileType html javascript setlocal ts=2 sts=2 sw=2 
+autocmd FileType html javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nnoremap ,1 :set tabstop=2<CR>
 nnoremap ,2 :set shiftwidth=2<CR>
