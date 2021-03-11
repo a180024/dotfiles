@@ -54,19 +54,19 @@ set encoding=utf-8
 set fileencoding=utf-8
 " sane editing
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set colorcolumn=80
 set viminfo='25,\"50,n~/.viminfo
 filetype plugin indent on
 set smartindent
 set autoindent
-autocmd FileType html javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType python setlocal ts=4 sts=0 sw=4
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType python let g:auto_save=1
 nnoremap ,1 :set tabstop=2<CR>
 nnoremap ,2 :set shiftwidth=2<CR>
-"disable auto save
 " CSS autocompletion
 set omnifunc=syntaxcomplete#Complete
 " folds
@@ -90,7 +90,7 @@ set autochdir
 " Run Black on save.
 autocmd BufWritePre *.py :Black
 
-" **VIM PLUG**
+" **VIM PLUG*
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -105,11 +105,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-Plug 'psf/black', {'branch': 'stable'}
+" Plug 'psf/black', {'branch': 'stable'}
 Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'ambv/black'
 call plug#end()
 
 " **PLUG SETTINGS**

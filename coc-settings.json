@@ -7,7 +7,9 @@
   "python.pythonPath": "/usr/local/bin/python3",
   "eslint.filetypes": [
     "javascript",
-    "javascriptreact"
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
   ],
   "eslint.options" : {
     "env": {
@@ -15,7 +17,7 @@
         "node": true
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "javascriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "languageserver": {
         "ccls": {
             "command": "ccls",

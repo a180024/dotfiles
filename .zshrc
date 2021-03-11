@@ -1,8 +1,4 @@
 # Aliases
-alias vb="VBoxManage startvm \"Ubuntu Server 20.4\" --type headless"
-alias xvb="VBoxManage controlvm \"Ubuntu Server 20.4\" poweroff"
-alias sshvm="ssh davinwu@127.0.0.1 -p 2222"
-alias startvagrant="vagrant init ubuntu/trusty32; vagrant up; vagrant ssh"
 alias brewpermission="sudo chown -R $(whoami) $(brew --prefix)/*"
 
 # Shortcuts
@@ -48,8 +44,6 @@ set -o vi
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
-export PATH="/usr/local/opt/postgresql/bin:$PATH"
 export PATH="/usr/local/opt/mongodb/bin:$PATH"
 
 # nvm
@@ -99,10 +93,10 @@ export FZF_BASE=$HOME/.fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 source $ZSH/oh-my-zsh.sh
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 GITSTATUS_LOG_LEVEL=DEBUG
 
 # Homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
+

@@ -29,7 +29,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612006575891
+      "expiry": 1612710905836
     },
     "/usr/bin/python.v3": {
       "data": {
@@ -54,7 +54,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612006575890
+      "expiry": 1612710905838
     },
     "/usr/local/bin/python3.7.v3": {
       "data": {
@@ -106,7 +106,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612006575886
+      "expiry": 1612710905832
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.v3": {
       "data": {
@@ -131,7 +131,7 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1612006575935
+      "expiry": 1612710905859
     },
     "/usr/bin/python3.v3": {
       "data": {
@@ -156,7 +156,7 @@
         "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2"
       },
-      "expiry": 1611654317405
+      "expiry": 1612710905860
     },
     "/usr/local/bin/python3.8.v3": {
       "data": {
@@ -181,7 +181,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "e28fb077a68a055642a7b0c68297e23cba6eae9a2e5575d6259fc85522b545f801d8b6d6d1fab8d97f01c3fe15914257948f02eb6dd4385c1de2990fc800506c"
       },
-      "expiry": 1612006576229
+      "expiry": 1612710905839
     },
     "/usr/local/bin/python3.v3": {
       "data": {
@@ -206,7 +206,7 @@
         "sysPrefix": "/Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "a296bdd063817c684d21f5af20b0cc6eff5c9ae5fd9e4aea8e5f6ac223755ac30b1acad520cadce5e4a670e00c1bced2930b9ac696398d45a5cdc5539bfda7be"
       },
-      "expiry": 1612006576232
+      "expiry": 1612710905822
     },
     "INTERPRETERS_CACHE_v3_CurrentPathService": [
       {
@@ -306,7 +306,7 @@
       "data": {
         "fileHash": "a296bdd063817c684d21f5af20b0cc6eff5c9ae5fd9e4aea8e5f6ac223755ac30b1acad520cadce5e4a670e00c1bced2930b9ac696398d45a5cdc5539bfda7be"
       },
-      "expiry": 1612006575929
+      "expiry": 1612710905902
     },
     "INTERPRETERS_CACHE_v3_KnownPathsService": [
       {
@@ -656,6 +656,29 @@
       },
       {
         "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
         "path": "/usr/local/bin/python",
         "version": {
           "options": {
@@ -791,6 +814,29 @@
         "sysPrefix": "/System/Library/Frameworks/Python.framework/Versions/2.7",
         "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
         "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.8.2-final",
+          "major": 3,
+          "minor": 8,
+          "patch": 2,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.8.2-final"
+        },
+        "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+        "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
+        "type": "Unknown"
       }
     ],
     "PipEnvInformation": [],
@@ -799,7 +845,7 @@
         "displayName": "Python 3.8.2 64-bit",
         "hash": "a296bdd063817c684d21f5af20b0cc6eff5c9ae5fd9e4aea8e5f6ac223755ac30b1acad520cadce5e4a670e00c1bced2930b9ac696398d45a5cdc5539bfda7be-08150be9f8e5c9315bae3f183b5d74b4"
       },
-      "expiry": 1612006576236
+      "expiry": 1612710905950
     },
     "/usr/local/bin/python3.7.interpreter.displayName.v7": {
       "data": {
@@ -813,21 +859,21 @@
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-f5b651b9c4b75532b11ae83303c43d14"
       },
-      "expiry": 1612006598299
+      "expiry": 1612710905892
     },
     "/usr/bin/python3.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-4bc3c9f5346452a4fe404c621ebcd443"
       },
-      "expiry": 1611654317499
+      "expiry": 1612710905897
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 2.7.16 64-bit",
         "hash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2-a9fb100b1ab04c53a774363838d4885e"
       },
-      "expiry": 1612006598300
+      "expiry": 1612710905896
     },
     "/usr/local/bin/python3.7.interpreter.Details.v7": {
       "data": {
@@ -887,7 +933,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1612006598308
+      "expiry": 1612710905910
     },
     "/usr/bin/python3.interpreter.Details.v7": {
       "data": {
@@ -917,7 +963,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1611654317518
+      "expiry": 1612710905920
     },
     "/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python.interpreter.Details.v7": {
       "data": {
@@ -947,7 +993,7 @@
           "displayName": "Python 2.7.16 64-bit"
         }
       },
-      "expiry": 1612006598311
+      "expiry": 1612710905917
     },
     "ProposeLSBanner": false,
     "/usr/local/bin/python.v3": {
@@ -973,14 +1019,14 @@
         "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
         "fileHash": "dddb20ecb53e4e65d734458333d33cd126452cd626c5ec44cd8a16a0b47fe562a51270325def2a898ed4847be2ff04dc4858fa75544d0e03897cfc458e1eb529"
       },
-      "expiry": 1612006576228
+      "expiry": 1612710905806
     },
     "/usr/local/bin/python.interpreter.displayName.v7": {
       "data": {
         "displayName": "Python 3.8.2 64-bit",
         "hash": "dddb20ecb53e4e65d734458333d33cd126452cd626c5ec44cd8a16a0b47fe562a51270325def2a898ed4847be2ff04dc4858fa75544d0e03897cfc458e1eb529-7455ebbb86ee535a4fa3c658bb9068da"
       },
-      "expiry": 1612006598297
+      "expiry": 1612710905894
     },
     "/usr/local/bin/python.interpreter.Details.v7": {
       "data": {
@@ -1010,7 +1056,7 @@
           "displayName": "Python 3.8.2 64-bit"
         }
       },
-      "expiry": 1612006598304
+      "expiry": 1612710905914
     },
     "/Users/davin/Desktop/Programming/.virtualenvs/ecom/bin/python3.8.v3": {
       "data": {
@@ -2312,7 +2358,7 @@
     },
     "InterpreterAutoSeletionRule-system": {
       "architecture": 3,
-      "path": "/usr/local/bin/python",
+      "path": "/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -2329,14 +2375,14 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
-      "fileHash": "dddb20ecb53e4e65d734458333d33cd126452cd626c5ec44cd8a16a0b47fe562a51270325def2a898ed4847be2ff04dc4858fa75544d0e03897cfc458e1eb529",
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     },
     "InterpreterAutoSeletionRule-cachedInterpreters": {
       "architecture": 3,
-      "path": "/usr/local/bin/python",
+      "path": "/usr/bin/python3",
       "version": {
         "options": {
           "loose": false,
@@ -2353,8 +2399,8 @@
         "build": [],
         "version": "3.8.2-final"
       },
-      "sysPrefix": "/usr/local/bin/../../../Library/Frameworks/Python.framework/Versions/3.8",
-      "fileHash": "dddb20ecb53e4e65d734458333d33cd126452cd626c5ec44cd8a16a0b47fe562a51270325def2a898ed4847be2ff04dc4858fa75544d0e03897cfc458e1eb529",
+      "sysPrefix": "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8",
+      "fileHash": "fe779c276a2cbfead74d365db0ac2cbfcea62106a4f0a4f6c9ded35d45b630e271af9461b8083f72f5c25478015c8409ecfa63d05b8eac8c5d1442777dd260d2",
       "type": "Unknown",
       "displayName": "Python 3.8.2 64-bit"
     }
