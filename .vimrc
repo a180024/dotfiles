@@ -105,7 +105,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-" Plug 'psf/black', {'branch': 'stable'}
 Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'

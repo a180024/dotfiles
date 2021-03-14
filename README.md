@@ -1,10 +1,10 @@
-# Dotfiles Configuration
+# My Dotfiles Configuration
 
 ## SetUp
 Install the following:
 - Hammerspoon and Karabiner Elements for key mappings
 - Zsh and ohmyzsh
-- Tmux
+- Iterm2 and Tmux
 - Vim
 - Z 
 - FZF
