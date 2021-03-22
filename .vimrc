@@ -64,7 +64,6 @@ set smartindent
 set autoindent
 autocmd FileType python setlocal ts=4 sts=0 sw=4
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd FileType python let g:auto_save=1
 nnoremap ,1 :set tabstop=2<CR>
 nnoremap ,2 :set shiftwidth=2<CR>
 " CSS autocompletion
@@ -79,7 +78,9 @@ nnoremap ,m :mkview<CR>
 nnoremap ,l :loadview<CR>
 " window
 set splitbelow
+set splitright
 set termwinsize=10x0
+map <C> <C-W>
 " tabs
 map ,t :tabnew 
 map ,e :tabedit
@@ -110,6 +111,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'ambv/black'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " **PLUG SETTINGS**
@@ -277,3 +279,7 @@ let g:which_key_map.w = {
       \ 'r' : [':resize 10'                          , 'Resize Window 10x0'],
       \ }
 
+"vim-terraform
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1

@@ -42,6 +42,7 @@ set -o vi
 
 # Paths
 export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/mongodb/bin:$PATH"
