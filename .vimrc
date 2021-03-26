@@ -62,7 +62,7 @@ set viminfo='25,\"50,n~/.viminfo
 filetype plugin indent on
 set smartindent
 set autoindent
-autocmd FileType python setlocal ts=4 sts=0 sw=4
+autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nnoremap ,1 :set tabstop=2<CR>
 nnoremap ,2 :set shiftwidth=2<CR>
