@@ -106,12 +106,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
-Plug '907th/vim-auto-save'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'ambv/black'
 Plug 'hashivim/vim-terraform'
+Plug 'tomlion/vim-solidity'
 call plug#end()
 
 " **PLUG SETTINGS**
@@ -129,8 +129,6 @@ let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 " emmet
 let g:user_emmet_leader_key=','
-" vim auto save
-" let g:auto_save = 1
 " coc nvim
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -283,3 +281,4 @@ let g:which_key_map.w = {
 let g:terraform_align=1
 let g:terraform_fold_sections=1
 let g:terraform_fmt_on_save=1
+
